@@ -1,0 +1,35 @@
+players_list:
+    path: /{_version}/{_locale}/players.{_format}
+    controller: App\Controller\Rest\PlayerController::getPlayers
+    methods: [GET]
+    prefix: /api
+    defaults:
+        _format: json
+players_detail:
+    path: /{_version}/{_locale}/players/{player_id}.{_format}
+    controller: App\Controller\Rest\PlayerController::getPlayer
+    methods: [GET]
+    prefix: /api
+    defaults:
+        _format: json
+players_create:
+    path: /{_version}/{_locale}/players.{_format}
+    controller: App\Controller\Rest\PlayerController::postPlayer
+    methods: [POST]
+    prefix: /api
+    defaults:
+        _format: json
+players_update:
+    path: /{_version}/{_locale}/players/{player_id}.{_format}
+    controller: App\Controller\Rest\PlayerController::putPlayer
+    methods: [PUT]
+    prefix: /api
+    defaults:
+        _format: json
+players_delete:
+    path: /{_version}/{_locale}/players/{player_id}.{_format}
+    controller: App\Controller\Rest\PlayerController::deletePlayer
+    methods: [DELETE]
+    prefix: /api
+    defaults:
+        _format: json
